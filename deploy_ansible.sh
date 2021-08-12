@@ -3,8 +3,8 @@
 #mkdir -p $HOME/var/tf
 #cd $HOME/var/tf
 
-git clone gituser@sreengine:webapp.git
-cd webapp
+git clone gituser@sreengine:devopslabs.git
+cd devopslabs
 
 i=`cat version`
 echo "Build Image $i"
