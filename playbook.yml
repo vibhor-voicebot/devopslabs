@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  remote_user: root
+  tasks:
+  - name: Creates directory
+    file:
+      path: /var/log/web1
+      state: directory
+
+  - name: Start Web Container
+    docker_container:
+      name: web1
+      image: apache:0.2
+      state: started
+      ports:
+      - "2000:80"
+      volumes:
+      - /var/log/web1:/var/log/httpd
