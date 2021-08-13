@@ -10,7 +10,7 @@
 echo "Building a docker image Apache 0.2"
 docker build -t apache:0.2 .
 wait
-ansible-playbook playbook.yml -e 'ansible_python_interpreter=/usr/bin/python3'
+ansible-playbook playbook.yml -e 'ansible_python_interpreter=/usr/bin/python2'
 
 docker ps
 
