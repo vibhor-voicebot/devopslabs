@@ -3,6 +3,11 @@
   #remote_user: root
   tasks:
   - name: Creates directory
+    shell: ""
+    register: out
+   
+
+  - name: Creates directory
     file:
       path: /var/log/web1
       state: directory
